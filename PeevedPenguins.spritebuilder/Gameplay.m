@@ -28,7 +28,7 @@
 
 -(void) launchPenguins{
     CCNode *penguin = [CCBReader load: @"Penguin"]; //create variable penguin from spriteBuilder file Penguin
-    CCNode *contentNode = [CCBReader load: @"Gameplay"];
+   // CCNode *contentNode = [CCBReader load: @"Gameplay"];
     
     //position penguin at bowl of catapult
     penguin.position = ccpAdd(_catapultArm.position, ccp(16,50));
