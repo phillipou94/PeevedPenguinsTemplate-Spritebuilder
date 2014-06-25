@@ -7,6 +7,7 @@
 //
 
 #import "Gameplay.h"
+#import "CCPhysics+ObjectiveChipmunk.h"
 
 @implementation Gameplay{
     CCPhysicsNode *_physicsNode;
@@ -126,5 +127,20 @@
 -(void)ccPhysicsCollisionPostSolve:(CCPhysicsCollisionPair *)pair seal:(CCNode *)nodeA wildcard:(CCNode *)nodeB{
     CCLOG(@"Something Collided with a Seal");
 }
+
+-(void) sealRemoved: (CCNode *) seal{
+    [seal removeFromParent];
+}
+
+-(void) ccPhysicsCollisionPostSolve:(CCPhysicsCollisionPair *)pair seal:(CCNode *)nodeA typeB:(CCNode *)nodeB{
+    float energy = [pair totalKineticEnergy];
+    
+    if(energy >5000.f){
+        [[_physicsNode space] addPostStepBlock:^{
+            [self sealRemoved: nodeA];}
+                                           key:nodeA];
+    }
+}
+
 
 @end
