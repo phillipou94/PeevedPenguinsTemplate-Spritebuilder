@@ -14,21 +14,21 @@
     CCNode *_catapultArm;
     CCNode *_contentNode;
     CCNode *_pullbackNode;
+    CCNode *_mouseJointNode;
+    CCPhysicsJoint *_mouseJoint;
 }
 
 -(void) didLoadFromCCB{
     self.userInteractionEnabled=TRUE;
     CCScene *level = [CCBReader loadAsScene: @"Levels/Level1"];
     [_levelNode addChild: level];
-    _physicsNode.debugDraw= TRUE;
+    //_physicsNode.debugDraw= TRUE;
     _pullbackNode.physicsBody.collisionMask=@[];//nothing collides with the pullbacknode
+    _mouseJointNode.physicsBody.collisionMask=@[];
 }
 
-//this function is called everytime something is touched
--(void) touchBegan:(UITouch *)touch withEvent:(UIEvent *)event{
-    [self launchPenguins];
-    
-}
+
+
 
 -(void) launchPenguins{
     CCNode *penguin = [CCBReader load: @"Penguin"]; //create variable penguin from spriteBuilder file Penguin
@@ -57,4 +57,37 @@
 -(void) retry{
     [[CCDirector sharedDirector] replaceScene: [CCBReader loadAsScene:@"Gameplay"]];
 }
+
+//this function is called everytime something is touched
+
+-(void) touchBegan: (UITouch *) touch withEvent: (UIEvent *) event{
+    CGPoint touchLocation = [touch locationInNode:_contentNode];
+    //if player starts touching catapult arm, we create a spring joint between mouseJoint and catapultArm
+    
+    if (CGRectContainsPoints([_catapultArm boundingBox], touchLocation)) {
+        _mouseJointNode.position=touchLocation; //move mouseJoint to where you touched
+        _mouseJoint = [CCPhysicsJoint connectedSpringJointWithBodyA:_mouseJointNode bodyB:_catapultArm anchorA:ccp(0,0) anchorB:ccp(34,138) restLength:0.f stiffness:3000.f damping:150.f];
+    }
+}
+-(void)touchMoved:(UITouch *)touch withEvent: (UIEvent *) event{
+    //whenever touches move update position of mouseJointNode to the touch
+    CGPoint touchLocation = [touch locationInNode: _contentNode];
+    _mouseJointNode.position = touchLocation;
+}
+-(void) releaseCatapult{
+    if (_mouseJoint !=nil){
+        [_mouseJoint invalidate];   //release mouseJoint
+        _mouseJoint = nil;          //destroy mouse joint
+    }
+    
+}
+
+//when touch ends we want to release the catapult
+
+
+-(void) touchEnded:(UITouch *)touch withEvent:(UIEvent *)event{
+    [self releaseCatapult];
+    
+}
+
 @end
