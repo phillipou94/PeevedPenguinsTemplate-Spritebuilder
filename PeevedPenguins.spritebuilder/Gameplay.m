@@ -31,6 +31,7 @@
     
     //position penguin at bowl of catapult
     penguin.position = ccpAdd(_catapultArm.position, ccp(16,50));
+    
     // add the penguin to the physicsNode of this scene (because it has physics enabled)
     [_physicsNode addChild: penguin];   //make it a child of the _physicsNode
     
