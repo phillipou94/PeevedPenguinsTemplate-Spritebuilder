@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>12</integer>
+	<integer>11</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -43,13 +43,13 @@
 				<key>UUID</key>
 				<integer>1</integer>
 				<key>baseClass</key>
-				<string>CCBFile</string>
+				<string>CCSprite</string>
 				<key>children</key>
 				<array/>
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>Seal</string>
+				<string>tallblock</string>
 				<key>memberVarAssignmentName</key>
 				<string></string>
 				<key>memberVarAssignmentType</key>
@@ -86,14 +86,14 @@
 						</array>
 						<array>
 							<real>0.0</real>
-							<real>25</real>
+							<real>47</real>
 						</array>
 						<array>
-							<real>27</real>
-							<real>25</real>
+							<real>23</real>
+							<real>47</real>
 						</array>
 						<array>
-							<real>27</real>
+							<real>23</real>
 							<real>0.0</real>
 						</array>
 					</array>
@@ -101,16 +101,16 @@
 					<array>
 						<array>
 							<array>
-								<real>27</real>
+								<real>23</real>
 								<real>0.0</real>
 							</array>
 							<array>
-								<real>27</real>
-								<real>25</real>
+								<real>23</real>
+								<real>47</real>
 							</array>
 							<array>
 								<real>0.0</real>
-								<real>25</real>
+								<real>47</real>
 							</array>
 							<array>
 								<real>0.0</real>
@@ -136,11 +136,22 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>37.000015258789062</real>
-							<real>25.500007629394531</real>
+							<real>70</real>
+							<real>24</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>anchorPoint</string>
+						<key>type</key>
+						<string>Point</string>
+						<key>value</key>
+						<array>
+							<real>0.5</real>
+							<real>0.5</real>
 						</array>
 					</dict>
 					<dict>
@@ -158,11 +169,27 @@
 					</dict>
 					<dict>
 						<key>name</key>
-						<string>ccbFile</string>
+						<string>spriteFrame</string>
 						<key>type</key>
-						<string>CCBFile</string>
+						<string>SpriteFrame</string>
 						<key>value</key>
-						<string>Seal.ccb</string>
+						<array>
+							<string></string>
+							<string>PeevedPenguinsAssets/tallblock.png</string>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>color</string>
+						<key>type</key>
+						<string>Color3</string>
+						<key>value</key>
+						<array>
+							<real>1</real>
+							<real>1</real>
+							<real>1</real>
+							<real>1</real>
+						</array>
 					</dict>
 				</array>
 			</dict>
@@ -170,13 +197,13 @@
 				<key>UUID</key>
 				<integer>2</integer>
 				<key>baseClass</key>
-				<string>CCBFile</string>
+				<string>CCSprite</string>
 				<key>children</key>
 				<array/>
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>Seal</string>
+				<string>tallblock</string>
 				<key>memberVarAssignmentName</key>
 				<string></string>
 				<key>memberVarAssignmentType</key>
@@ -213,14 +240,14 @@
 						</array>
 						<array>
 							<real>0.0</real>
-							<real>25</real>
+							<real>47</real>
 						</array>
 						<array>
-							<real>27</real>
-							<real>25</real>
+							<real>23</real>
+							<real>47</real>
 						</array>
 						<array>
-							<real>27</real>
+							<real>23</real>
 							<real>0.0</real>
 						</array>
 					</array>
@@ -228,16 +255,16 @@
 					<array>
 						<array>
 							<array>
-								<real>27</real>
+								<real>23</real>
 								<real>0.0</real>
 							</array>
 							<array>
-								<real>27</real>
-								<real>25</real>
+								<real>23</real>
+								<real>47</real>
 							</array>
 							<array>
 								<real>0.0</real>
-								<real>25</real>
+								<real>47</real>
 							</array>
 							<array>
 								<real>0.0</real>
@@ -263,11 +290,22 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>97.000030517578125</real>
-							<real>149.5</real>
+							<real>140</real>
+							<real>24</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>anchorPoint</string>
+						<key>type</key>
+						<string>Point</string>
+						<key>value</key>
+						<array>
+							<real>0.5</real>
+							<real>0.5</real>
 						</array>
 					</dict>
 					<dict>
@@ -285,27 +323,41 @@
 					</dict>
 					<dict>
 						<key>name</key>
-						<string>ccbFile</string>
+						<string>spriteFrame</string>
 						<key>type</key>
-						<string>CCBFile</string>
+						<string>SpriteFrame</string>
 						<key>value</key>
-						<string>Seal.ccb</string>
+						<array>
+							<string></string>
+							<string>PeevedPenguinsAssets/tallblock.png</string>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>color</string>
+						<key>type</key>
+						<string>Color3</string>
+						<key>value</key>
+						<array>
+							<real>1</real>
+							<real>1</real>
+							<real>1</real>
+							<real>1</real>
+						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
 				<integer>3</integer>
 				<key>baseClass</key>
-				<string>CCBFile</string>
+				<string>CCSprite</string>
 				<key>children</key>
 				<array/>
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>Seal</string>
+				<string>tallblock</string>
 				<key>memberVarAssignmentName</key>
 				<string></string>
 				<key>memberVarAssignmentType</key>
@@ -342,14 +394,14 @@
 						</array>
 						<array>
 							<real>0.0</real>
-							<real>25</real>
+							<real>47</real>
 						</array>
 						<array>
-							<real>27</real>
-							<real>25</real>
+							<real>23</real>
+							<real>47</real>
 						</array>
 						<array>
-							<real>27</real>
+							<real>23</real>
 							<real>0.0</real>
 						</array>
 					</array>
@@ -357,16 +409,16 @@
 					<array>
 						<array>
 							<array>
-								<real>27</real>
+								<real>23</real>
 								<real>0.0</real>
 							</array>
 							<array>
-								<real>27</real>
-								<real>25</real>
+								<real>23</real>
+								<real>47</real>
 							</array>
 							<array>
 								<real>0.0</real>
-								<real>25</real>
+								<real>47</real>
 							</array>
 							<array>
 								<real>0.0</real>
@@ -392,11 +444,22 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>425.00006103515625</real>
-							<real>23.500007629394531</real>
+							<real>71</real>
+							<real>69</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>anchorPoint</string>
+						<key>type</key>
+						<string>Point</string>
+						<key>value</key>
+						<array>
+							<real>0.5</real>
+							<real>0.5</real>
 						</array>
 					</dict>
 					<dict>
@@ -414,11 +477,27 @@
 					</dict>
 					<dict>
 						<key>name</key>
-						<string>ccbFile</string>
+						<string>spriteFrame</string>
 						<key>type</key>
-						<string>CCBFile</string>
+						<string>SpriteFrame</string>
 						<key>value</key>
-						<string>Seal.ccb</string>
+						<array>
+							<string></string>
+							<string>PeevedPenguinsAssets/tallblock.png</string>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>color</string>
+						<key>type</key>
+						<string>Color3</string>
+						<key>value</key>
+						<array>
+							<real>1</real>
+							<real>1</real>
+							<real>1</real>
+							<real>1</real>
+						</array>
 					</dict>
 				</array>
 			</dict>
@@ -519,8 +598,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>88</real>
-							<real>42</real>
+							<real>141</real>
+							<real>69</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -586,7 +665,7 @@
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>tallblock</string>
+				<string>taperedblock</string>
 				<key>memberVarAssignmentName</key>
 				<string></string>
 				<key>memberVarAssignmentType</key>
@@ -622,15 +701,15 @@
 							<real>0.0</real>
 						</array>
 						<array>
-							<real>0.0</real>
-							<real>47</real>
+							<real>12.886734008789062</real>
+							<real>25.246109008789062</real>
 						</array>
 						<array>
-							<real>23</real>
-							<real>47</real>
+							<real>102.41409301757812</real>
+							<real>23.394546508789062</real>
 						</array>
 						<array>
-							<real>23</real>
+							<real>113</real>
 							<real>0.0</real>
 						</array>
 					</array>
@@ -638,16 +717,16 @@
 					<array>
 						<array>
 							<array>
-								<real>23</real>
+								<real>113</real>
 								<real>0.0</real>
 							</array>
 							<array>
-								<real>23</real>
-								<real>47</real>
+								<real>102.41409301757812</real>
+								<real>23.394546508789062</real>
 							</array>
 							<array>
-								<real>0.0</real>
-								<real>47</real>
+								<real>12.886734008789062</real>
+								<real>25.246109008789062</real>
 							</array>
 							<array>
 								<real>0.0</real>
@@ -673,8 +752,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>164</real>
-							<real>43</real>
+							<real>106</real>
+							<real>105</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -712,7 +791,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>PeevedPenguinsAssets/tallblock.png</string>
+							<string>PeevedPenguinsAssets/taperedblock.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -827,8 +906,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>98</real>
-							<real>95</real>
+							<real>108</real>
+							<real>140</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -841,8 +920,8 @@
 						<string>Point</string>
 						<key>value</key>
 						<array>
-							<real>0.97027856111526489</real>
-							<real>0.62608045339584351</real>
+							<real>0.5</real>
+							<real>0.5</real>
 						</array>
 					</dict>
 					<dict>
@@ -981,8 +1060,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>164</real>
-							<real>91</real>
+							<real>107</real>
+							<real>184</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -1048,7 +1127,7 @@
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>taperedblock</string>
+				<string>seal</string>
 				<key>memberVarAssignmentName</key>
 				<string></string>
 				<key>memberVarAssignmentType</key>
@@ -1084,15 +1163,15 @@
 							<real>0.0</real>
 						</array>
 						<array>
-							<real>12.718765258789062</real>
-							<real>24.414093017578125</real>
+							<real>0.0</real>
+							<real>25</real>
 						</array>
 						<array>
-							<real>103.54690551757812</real>
-							<real>25.679718017578125</real>
+							<real>27</real>
+							<real>25</real>
 						</array>
 						<array>
-							<real>113</real>
+							<real>27</real>
 							<real>0.0</real>
 						</array>
 					</array>
@@ -1100,16 +1179,16 @@
 					<array>
 						<array>
 							<array>
-								<real>113</real>
+								<real>27</real>
 								<real>0.0</real>
 							</array>
 							<array>
-								<real>103.54690551757812</real>
-								<real>25.679718017578125</real>
+								<real>27</real>
+								<real>25</real>
 							</array>
 							<array>
-								<real>12.718765258789062</real>
-								<real>24.414093017578125</real>
+								<real>0.0</real>
+								<real>25</real>
 							</array>
 							<array>
 								<real>0.0</real>
@@ -1135,8 +1214,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>124</real>
-							<real>126</real>
+							<real>136</real>
+							<real>132</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -1174,7 +1253,163 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>PeevedPenguinsAssets/taperedblock.png</string>
+							<string>PeevedPenguinsAssets/seal.png</string>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>color</string>
+						<key>type</key>
+						<string>Color3</string>
+						<key>value</key>
+						<array>
+							<real>1</real>
+							<real>1</real>
+							<real>1</real>
+							<real>1</real>
+						</array>
+					</dict>
+				</array>
+				<key>selected</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>UUID</key>
+				<integer>9</integer>
+				<key>baseClass</key>
+				<string>CCSprite</string>
+				<key>children</key>
+				<array/>
+				<key>customClass</key>
+				<string></string>
+				<key>displayName</key>
+				<string>seal</string>
+				<key>memberVarAssignmentName</key>
+				<string></string>
+				<key>memberVarAssignmentType</key>
+				<integer>1</integer>
+				<key>physicsBody</key>
+				<dict>
+					<key>affectedByGravity</key>
+					<true/>
+					<key>allowsRotation</key>
+					<true/>
+					<key>bodyShape</key>
+					<integer>0</integer>
+					<key>collisionCategories</key>
+					<array/>
+					<key>collisionMask</key>
+					<array/>
+					<key>collisionType</key>
+					<string></string>
+					<key>cornerRadius</key>
+					<real>0.0</real>
+					<key>density</key>
+					<real>1</real>
+					<key>dynamic</key>
+					<true/>
+					<key>elasticity</key>
+					<real>0.30000001192092896</real>
+					<key>friction</key>
+					<real>0.30000001192092896</real>
+					<key>points</key>
+					<array>
+						<array>
+							<real>0.0</real>
+							<real>0.0</real>
+						</array>
+						<array>
+							<real>0.0</real>
+							<real>25</real>
+						</array>
+						<array>
+							<real>27</real>
+							<real>25</real>
+						</array>
+						<array>
+							<real>27</real>
+							<real>0.0</real>
+						</array>
+					</array>
+					<key>polygons</key>
+					<array>
+						<array>
+							<array>
+								<real>27</real>
+								<real>0.0</real>
+							</array>
+							<array>
+								<real>27</real>
+								<real>25</real>
+							</array>
+							<array>
+								<real>0.0</real>
+								<real>25</real>
+							</array>
+							<array>
+								<real>0.0</real>
+								<real>0.0</real>
+							</array>
+						</array>
+					</array>
+				</dict>
+				<key>properties</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>name</string>
+						<key>type</key>
+						<string>StringSimple</string>
+						<key>value</key>
+						<string></string>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>position</string>
+						<key>type</key>
+						<string>Position</string>
+						<key>value</key>
+						<array>
+							<real>246</real>
+							<real>36</real>
+							<integer>0</integer>
+							<integer>0</integer>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>anchorPoint</string>
+						<key>type</key>
+						<string>Point</string>
+						<key>value</key>
+						<array>
+							<real>0.92332178354263306</real>
+							<real>1.3053131103515625</real>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>scale</string>
+						<key>type</key>
+						<string>ScaleLock</string>
+						<key>value</key>
+						<array>
+							<real>1</real>
+							<real>1</real>
+							<false/>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>spriteFrame</string>
+						<key>type</key>
+						<string>SpriteFrame</string>
+						<key>value</key>
+						<array>
+							<string></string>
+							<string>PeevedPenguinsAssets/seal.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -1202,7 +1437,7 @@
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>tallblock</string>
+				<string>seal</string>
 				<key>memberVarAssignmentName</key>
 				<string></string>
 				<key>memberVarAssignmentType</key>
@@ -1239,14 +1474,14 @@
 						</array>
 						<array>
 							<real>0.0</real>
-							<real>47</real>
+							<real>25</real>
 						</array>
 						<array>
-							<real>23</real>
-							<real>47</real>
+							<real>27</real>
+							<real>25</real>
 						</array>
 						<array>
-							<real>23</real>
+							<real>27</real>
 							<real>0.0</real>
 						</array>
 					</array>
@@ -1254,16 +1489,16 @@
 					<array>
 						<array>
 							<array>
-								<real>23</real>
+								<real>27</real>
 								<real>0.0</real>
 							</array>
 							<array>
-								<real>23</real>
-								<real>47</real>
+								<real>27</real>
+								<real>25</real>
 							</array>
 							<array>
 								<real>0.0</real>
-								<real>47</real>
+								<real>25</real>
 							</array>
 							<array>
 								<real>0.0</real>
@@ -1289,162 +1524,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>124</real>
-							<real>177</real>
-							<integer>0</integer>
-							<integer>0</integer>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>anchorPoint</string>
-						<key>type</key>
-						<string>Point</string>
-						<key>value</key>
-						<array>
-							<real>0.24575407803058624</real>
-							<real>0.84724068641662598</real>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>scale</string>
-						<key>type</key>
-						<string>ScaleLock</string>
-						<key>value</key>
-						<array>
-							<real>1</real>
-							<real>1</real>
-							<false/>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>spriteFrame</string>
-						<key>type</key>
-						<string>SpriteFrame</string>
-						<key>value</key>
-						<array>
-							<string></string>
-							<string>ccbResources/PeevedPenguinsAssets/tallblock.png</string>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>color</string>
-						<key>type</key>
-						<string>Color3</string>
-						<key>value</key>
-						<array>
-							<real>1</real>
-							<real>1</real>
-							<real>1</real>
-							<real>1</real>
-						</array>
-					</dict>
-				</array>
-			</dict>
-			<dict>
-				<key>UUID</key>
-				<integer>11</integer>
-				<key>baseClass</key>
-				<string>CCSprite</string>
-				<key>children</key>
-				<array/>
-				<key>customClass</key>
-				<string></string>
-				<key>displayName</key>
-				<string>tallblock</string>
-				<key>memberVarAssignmentName</key>
-				<string></string>
-				<key>memberVarAssignmentType</key>
-				<integer>1</integer>
-				<key>physicsBody</key>
-				<dict>
-					<key>affectedByGravity</key>
-					<true/>
-					<key>allowsRotation</key>
-					<true/>
-					<key>bodyShape</key>
-					<integer>0</integer>
-					<key>collisionCategories</key>
-					<array/>
-					<key>collisionMask</key>
-					<array/>
-					<key>collisionType</key>
-					<string></string>
-					<key>cornerRadius</key>
-					<real>0.0</real>
-					<key>density</key>
-					<real>1</real>
-					<key>dynamic</key>
-					<true/>
-					<key>elasticity</key>
-					<real>0.30000001192092896</real>
-					<key>friction</key>
-					<real>0.30000001192092896</real>
-					<key>points</key>
-					<array>
-						<array>
-							<real>0.0</real>
-							<real>0.0</real>
-						</array>
-						<array>
-							<real>0.0</real>
-							<real>47</real>
-						</array>
-						<array>
-							<real>23</real>
-							<real>47</real>
-						</array>
-						<array>
-							<real>23</real>
-							<real>0.0</real>
-						</array>
-					</array>
-					<key>polygons</key>
-					<array>
-						<array>
-							<array>
-								<real>23</real>
-								<real>0.0</real>
-							</array>
-							<array>
-								<real>23</real>
-								<real>47</real>
-							</array>
-							<array>
-								<real>0.0</real>
-								<real>47</real>
-							</array>
-							<array>
-								<real>0.0</real>
-								<real>0.0</real>
-							</array>
-						</array>
-					</array>
-				</dict>
-				<key>properties</key>
-				<array>
-					<dict>
-						<key>name</key>
-						<string>name</string>
-						<key>type</key>
-						<string>StringSimple</string>
-						<key>value</key>
-						<string></string>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>position</string>
-						<key>type</key>
-						<string>Position</string>
-						<key>value</key>
-						<array>
-							<real>130</real>
-							<real>207</real>
+							<real>330</real>
+							<real>18</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -1482,7 +1563,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/PeevedPenguinsAssets/tallblock.png</string>
+							<string>PeevedPenguinsAssets/seal.png</string>
 						</array>
 					</dict>
 					<dict>
