@@ -12,7 +12,6 @@
     CCPhysicsNode *_physicsNode;
     CCNode *_levelNode;
     CCNode *_catapultArm;
-    CCNode *_contentNode;
 }
 
 -(void) didLoadFromCCB{
@@ -42,10 +41,9 @@
     [penguin.physicsBody applyForce:force];
     
     //ensure object is followed by camera
-    self.position = ccp(0, 0);
-    CCActionFollow *follow = [CCActionFollow actionWithTarget:penguin worldBoundary:self.boundingBox];
-    
-    [_contentNode runAction:follow];  //runaction is method that asks camera to follow object
+    self.position = ccp(0,0);
+    CCAction *follow= [CCActionFollow actionWithTarget:penguin worldBoundary: self.boundingBox];
+    [self runAction: follow];   //runaction is method that asks camera to follow object
     
 }
 
