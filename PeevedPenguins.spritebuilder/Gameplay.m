@@ -133,6 +133,7 @@
 }
 
 -(void) ccPhysicsCollisionPostSolve:(CCPhysicsCollisionPair *)pair seal:(CCNode *)nodeA typeB:(CCNode *)nodeB{
+   
     float energy = [pair totalKineticEnergy];
     
     if(energy >5000.f){
