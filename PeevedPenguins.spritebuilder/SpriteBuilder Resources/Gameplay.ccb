@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>21</integer>
+	<integer>22</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -33,7 +33,7 @@
 	<array>
 		<dict>
 			<key>UUID</key>
-			<integer>19</integer>
+			<integer>21</integer>
 			<key>baseClass</key>
 			<string>CCPhysicsPivotJoint</string>
 			<key>children</key>
@@ -55,8 +55,8 @@
 					<string>Position</string>
 					<key>value</key>
 					<array>
-						<real>205.00003051757812</real>
-						<real>109.00001525878906</real>
+						<real>202.00003051757812</real>
+						<real>111.00001525878906</real>
 						<integer>0</integer>
 						<integer>0</integer>
 						<integer>0</integer>
@@ -93,8 +93,8 @@
 					<string>Point</string>
 					<key>value</key>
 					<array>
-						<real>171.73771667480469</real>
-						<real>56.532135009765625</real>
+						<real>168.73771667480469</real>
+						<real>58.532135009765625</real>
 					</array>
 				</dict>
 				<dict>
