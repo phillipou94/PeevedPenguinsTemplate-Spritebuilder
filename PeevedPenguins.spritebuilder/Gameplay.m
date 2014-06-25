@@ -41,11 +41,15 @@
     CGPoint force = ccpMult(launchDirection, 8000);
     [penguin.physicsBody applyForce:force];
     
-    //ensure object is followed by camera
+    self.position = ccp(0,0);
+    CCAction *follow= [CCActionFollow actionWithTarget:penguin worldBoundary: self.boundingBox];
+    [self runAction: follow];
+    
+    /*//ensure object is followed by camera
     self.position = ccp(0,0);
     CCAction *follow= [CCActionFollow actionWithTarget:penguin worldBoundary: self.boundingBox];
     [contentNode runAction: follow];   //runaction is method that asks camera to follow object
-    
+    */
 }
 
 -(void) retry{
