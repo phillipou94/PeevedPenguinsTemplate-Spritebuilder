@@ -19,6 +19,8 @@
     CCPhysicsJoint *_mouseJoint;
     CCNode *_currentPenguin;
     CCPhysicsJoint *_penguinCatapultJoint;
+    static const float MIN_SPEED=5.f;
+    CCAction *_followPenguin;
 }
 
 -(void) didLoadFromCCB{
@@ -54,8 +56,8 @@
     
     //ensure object is followed by camera
     self.position = ccp(0,0);
-    CCAction *follow= [CCActionFollow actionWithTarget:penguin worldBoundary: self.boundingBox];
-    [_contentNode runAction: follow];   //runaction is method that asks camera to follow object
+    _followPenguin= [CCActionFollow actionWithTarget:penguin worldBoundary: self.boundingBox];
+    [_contentNode runAction: _followPenguin];   //runaction is method that asks camera to follow object
     
 }
 
@@ -151,7 +153,33 @@
     [seal removeFromParent];
     
 }
-
+-(void) nextAttempt{
+    _currentPenguin = nil; //not more penguins to follow at start of next attempt
+    [_contentNode stopAction: _followPenguin]; //stop scrolling action
+    //move camera back to the beginning
+    CCActionMoveTo *actionMoveTo = [CCActionMoveTo actionWithDuration:1.f position:ccp(0, 0)];
+    [_contentNode runAction:actionMoveTo];
+}
+-(void) update: (CCTime) delta{
+    //if speed is below minimum speed, assume attempt is over
+    if (ccpLength (_currentPenguin.physicsBody.velocity)<MIN_SPEED){
+        [self nextAttempt];
+        return;
+    }
+    int xMin = _currentPenguin.boundingBox.origin.x;
+    
+    if (xMin <self.boundingBox.origin.x){
+        [self nextAttempt];
+        return;
+    }
+    
+    int xMax = xMin +_currentPenguin.boundingBox.origin.x;
+    
+    if (xMax >(self.boundingBox.origin.x + self.boundingBox.size.width)){
+        [self nextAttempt];
+        return;
+    }
+}
 
 
 
