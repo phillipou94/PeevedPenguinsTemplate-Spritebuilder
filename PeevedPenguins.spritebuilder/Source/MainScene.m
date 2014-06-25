@@ -11,6 +11,6 @@
 @implementation MainScene
 -(void) play{
     CCScene *gameplayScene = [CCBReader loadAsScene: @"Gameplay"];
-    [[CCDirector sharedDirector] replaceScene: gameplayScene];
+    [[CCDirector sharedDirector] replaceScene: gameplayScene];      //take to gameplay scene in sprite builder
 }
 @end
