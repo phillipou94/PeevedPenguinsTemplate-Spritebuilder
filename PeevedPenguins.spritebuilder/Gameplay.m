@@ -115,8 +115,10 @@
         
         CCAction *follow = [CCActionFollow actionWithTarget: _currentPenguin worldBoundary:self.boundingBox];
         [_contentNode runAction: follow];
+        
+        _currentPenguin.launched=TRUE;
     }
-    _currentPenguin.launched=TRUE;
+    
     
 }
 
