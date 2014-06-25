@@ -19,7 +19,7 @@
     CCPhysicsJoint *_mouseJoint;
     CCNode *_currentPenguin;
     CCPhysicsJoint *_penguinCatapultJoint;
-    static const float MIN_SPEED=5.f;
+   
     CCAction *_followPenguin;
 }
 
@@ -160,6 +160,9 @@
     CCActionMoveTo *actionMoveTo = [CCActionMoveTo actionWithDuration:1.f position:ccp(0, 0)];
     [_contentNode runAction:actionMoveTo];
 }
+
+ static const float MIN_SPEED=5.f;
+
 -(void) update: (CCTime) delta{
     //if speed is below minimum speed, assume attempt is over
     if (ccpLength (_currentPenguin.physicsBody.velocity)<MIN_SPEED){
