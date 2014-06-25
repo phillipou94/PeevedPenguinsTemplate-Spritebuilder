@@ -12,7 +12,7 @@
     CCPhysicsNode *_physicsNode;
     CCNode *_levelNode;
     CCNode *_catapultArm;
-    CCNode *_contentNode
+    CCNode *_contentNode;
 }
 
 -(void) didLoadFromCCB{
