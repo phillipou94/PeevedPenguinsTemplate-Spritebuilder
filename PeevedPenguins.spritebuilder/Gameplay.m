@@ -161,7 +161,7 @@
     [_contentNode runAction:actionMoveTo];
 }
 
- static const float MIN_SPEED=5.f;
+ static const float MIN_SPEED=1.f;
 
 -(void) update: (CCTime) delta{
     //if speed is below minimum speed, assume attempt is over
