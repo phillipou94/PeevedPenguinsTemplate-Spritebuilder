@@ -16,13 +16,15 @@
     CCNode *_pullbackNode;
     CCNode *_mouseJointNode;
     CCPhysicsJoint *_mouseJoint;
+    CCNode *_currentPenguin;
+    CCPhysicsJoint *_penguinCatapultJoint;
 }
 
 -(void) didLoadFromCCB{
     self.userInteractionEnabled=TRUE;
     CCScene *level = [CCBReader loadAsScene: @"Levels/Level1"];
     [_levelNode addChild: level];
-    _physicsNode.debugDraw= TRUE;
+    //_physicsNode.debugDraw= TRUE;
     _pullbackNode.physicsBody.collisionMask=@[];//nothing collides with the pullbacknode
     _mouseJointNode.physicsBody.collisionMask=@[];
 }
@@ -72,6 +74,22 @@
         
         // setup a spring joint between the mouseJointNode and the catapultArm
         _mouseJoint = [CCPhysicsJoint connectedSpringJointWithBodyA:_mouseJointNode.physicsBody bodyB:_catapultArm.physicsBody anchorA:ccp(0, 0) anchorB:ccp(34, 138) restLength:0.f stiffness:3000.f damping:150.f];
+        
+        //create a penguin
+        _currentPenguin = [CCBReader load:@"Penguin"];
+        
+        CGPoint penguinPosition = [_catapultArm convertToWorldSpace:ccp(34,138)];
+        //transform the world position to the node space to which the penguin will be added
+        _currentPenguin.position = [_physicsNode convertToNodeSpace: penguinPosition];
+        
+        [_physicsNode addChild: _currentPenguin]; //make current Penguin a physics node
+        
+        _currentPenguin.physicsBody.allowsRotation = FALSE;
+        
+        // create a joint to keep the penguin fixed to the scoop until the catapult is released
+        _penguinCatapultJoint = [CCPhysicsJoint connectedPivotJointWithBodyA:_currentPenguin.physicsBody bodyB:_catapultArm.physicsBody anchorA:_currentPenguin.anchorPointInPoints];
+        
+        
     }
 }
 -(void)touchMoved:(UITouch *)touch withEvent: (UIEvent *) event{
@@ -83,6 +101,14 @@
     if (_mouseJoint !=nil){
         [_mouseJoint invalidate];   //release mouseJoint
         _mouseJoint = nil;          //destroy mouse joint
+    
+        [_penguinCatapultJoint invalidate]; //release penguinJoint
+        _penguinCatapultJoint = nil;    //destroy penguinJoint
+        
+        _currentPenguin.physicsBody.allowsRotation = TRUE; //now we allow rotation after catapult release
+        
+        CCAction *follow = [CCActionFollow actionWithTarget: _currentPenguin worldBoundary:self.boundingBox];
+        [_contentNode runAction: follow];
     }
     
 }
