@@ -9,6 +9,6 @@
 #import "CCNode.h"
 
 @interface Gameplay : CCNode <CCPhysicsCollisionDelegate>
--(void) ccPhysicsCollisionPostSolve:(CCPhysicsCollisionPair *)pair seal:(CCNode *)nodeA typeB:(CCNode *)nodeB;
+
 
 @end

@@ -9,5 +9,5 @@
 #import "CCSprite.h"
 
 @interface Seal : CCSprite
--(void)ccPhysicsCollisionPostSolve:(CCPhysicsCollisionPair *)pair seal:(CCNode *)nodeA wildcard:(CCNode *)nodeB;
+
 @end
