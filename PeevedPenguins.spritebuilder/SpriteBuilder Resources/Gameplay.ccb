@@ -729,7 +729,7 @@
 				<key>displayName</key>
 				<string>CCNode</string>
 				<key>memberVarAssignmentName</key>
-				<string>_contentNode</string>
+				<string>contentNode</string>
 				<key>memberVarAssignmentType</key>
 				<integer>1</integer>
 				<key>properties</key>
