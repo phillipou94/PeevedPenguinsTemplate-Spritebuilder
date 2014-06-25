@@ -46,4 +46,8 @@
     [self runAction: follow];   //runaction is method that asks camera to follow object
     
 }
+
+-(void) retry{
+    [[CCDirector sharedDirector] replaceScene: [CCBReader loadAsScene:@"Gameplay"]];
+}
 @end
