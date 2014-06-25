@@ -28,7 +28,7 @@
 
 -(void) launchPenguins{
     CCNode *penguin = [CCBReader load: @"Penguin"]; //create variable penguin from spriteBuilder file Penguin
-   // CCNode *contentNode = [CCBReader load: @"Gameplay"];
+   CCNode *contentNode = [CCBReader load: @"Gameplay"];
     
     //position penguin at bowl of catapult
     penguin.position = ccpAdd(_catapultArm.position, ccp(16,50));
@@ -41,15 +41,13 @@
     CGPoint force = ccpMult(launchDirection, 8000);
     [penguin.physicsBody applyForce:force];
     
-    self.position = ccp(0,0);
-    CCAction *follow= [CCActionFollow actionWithTarget:penguin worldBoundary: self.boundingBox];
-    [self runAction: follow];
     
-    /*//ensure object is followed by camera
+    
+    //ensure object is followed by camera
     self.position = ccp(0,0);
     CCAction *follow= [CCActionFollow actionWithTarget:penguin worldBoundary: self.boundingBox];
     [contentNode runAction: follow];   //runaction is method that asks camera to follow object
-    */
+    
 }
 
 -(void) retry{
