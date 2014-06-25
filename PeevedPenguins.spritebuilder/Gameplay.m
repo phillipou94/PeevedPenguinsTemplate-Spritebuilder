@@ -131,8 +131,8 @@
 -(void) sealRemoved: (CCNode *) seal{
     [seal removeFromParent];
 }
-
-/*-(void) ccPhysicsCollisionPostSolve:(CCPhysicsCollisionPair *)pair seal:(CCNode *)nodeA typeB:(CCNode *)nodeB{
+/*
+-(void) ccPhysicsCollisionPostSolve:(CCPhysicsCollisionPair *)pair seal:(CCNode *)nodeA typeB:(CCNode *)nodeB{
    
     float energy = [pair totalKineticEnergy];
     
@@ -141,7 +141,16 @@
             [self sealRemoved: nodeA];}
                                            key:nodeA];
     }
-}*/
+    
+    CCParticleSystem *explosion = (CCParticleSystem *) [CCBReader load: @"SealExplosion"];
+    
+    explosion.autoRemoveOnFinish = TRUE; //particle effect ends after awhile
+    
+    explosion.position = seal.position //make particle effect where seal is
+    
+    [seal]
+    */
+}
 
 
 @end
