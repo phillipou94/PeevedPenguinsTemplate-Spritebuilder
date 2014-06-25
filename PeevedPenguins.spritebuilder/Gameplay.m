@@ -132,7 +132,7 @@
     [seal removeFromParent];
 }
 
--(void) ccPhysicsCollisionPostSolve:(CCPhysicsCollisionPair *)pair seal:(CCNode *)nodeA typeB:(CCNode *)nodeB{
+/*-(void) ccPhysicsCollisionPostSolve:(CCPhysicsCollisionPair *)pair seal:(CCNode *)nodeA typeB:(CCNode *)nodeB{
    
     float energy = [pair totalKineticEnergy];
     
@@ -141,7 +141,7 @@
             [self sealRemoved: nodeA];}
                                            key:nodeA];
     }
-}
+}*/
 
 
 @end
