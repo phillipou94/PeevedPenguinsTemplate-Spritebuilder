@@ -163,7 +163,7 @@
     [_contentNode runAction:actionMoveTo];
 }
 
- static const float MIN_SPEED=5.f;
+/* static const float MIN_SPEED=5.f;
 
 - (void)update:(CCTime)delta
 {
@@ -190,6 +190,6 @@
     }
 }
 
-
+*/
 
 @end
