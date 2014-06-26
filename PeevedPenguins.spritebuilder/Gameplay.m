@@ -113,9 +113,8 @@
         
         _currentPenguin.physicsBody.allowsRotation = TRUE; //now we allow rotation after catapult release
         
-        CCAction *follow = [CCActionFollow actionWithTarget: _currentPenguin worldBoundary:self.boundingBox];
-        [_contentNode runAction: follow];
-        
+        _followPenguin =[CCActionFollow actionWithTarget:_currentPenguin worldBoundary:self.boundingBox];
+        [_contentNode runAction: _followPenguin];
         _currentPenguin.launched=TRUE;
     }
     
@@ -162,8 +161,7 @@
     CCActionMoveTo *actionMoveTo = [CCActionMoveTo actionWithDuration:1.f position:ccp(0, 0)];
     [_contentNode runAction:actionMoveTo];
 }
-
-/* static const float MIN_SPEED=5.f;
+ static const float MIN_SPEED=5.f;
 
 - (void)update:(CCTime)delta
 {
@@ -190,6 +188,6 @@
     }
 }
 
-*/
+
 
 @end
